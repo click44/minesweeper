@@ -13,7 +13,7 @@ export function Header(): JSX.Element {
             setTime(currentTimeStamp - initialTimeStamp);
         }, 10);
         return () => clearInterval(interval);
-    });
+    }, [initialTimeStamp]);
     
     return (
         <div className="header">
